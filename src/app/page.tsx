@@ -1,9 +1,10 @@
 import ThemeSwitch from '@/components/ThemeSwitch';
+import Navbar from '@/sections/Navbar';
 
 export default function Home() {
 	return (
 		<div className="">
-			<h1>Loogo</h1>
+			<Navbar />
 			<ThemeSwitch />
 		</div>
 	);

@@ -4,26 +4,29 @@ import { useEffect, useState } from 'react';
 import { Button } from 'react-daisyui';
 
 export default function ThemeSwitch() {
-	const [theme, setTheme] = useState('light');
+	const [theme, setTheme] = useState('');
 
-	// Load theme from local storage on initial render
+	const toggleTheme = () => {
+		setTheme((prevTheme) => {
+			const nextTheme = prevTheme === 'lofi' ? 'black' : 'lofi';
+			document.documentElement.setAttribute('data-theme', nextTheme);
+			return nextTheme;
+		});
+	};
+
 	useEffect(() => {
-		const savedTheme = localStorage.getItem('theme') || 'light';
+		const savedTheme = localStorage.getItem('theme') || 'lofi';
 		setTheme(savedTheme);
+		document.documentElement.setAttribute('data-theme', savedTheme);
 	}, []);
 
-	// Save theme to local storage whenever it changes
 	useEffect(() => {
 		localStorage.setItem('theme', theme);
 	}, [theme]);
 
-	const toggleTheme = () => {
-		setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
-		document.documentElement.setAttribute('data-theme', theme);
-	};
 	return (
 		<Button onClick={toggleTheme}>
-			{theme === 'light' ? 'Dark' : 'Light'}
+			{theme === 'black' ? '[ dark ]' : 'dark'}
 		</Button>
 	);
 }
