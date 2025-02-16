@@ -4,10 +4,12 @@ import { createContext, useContext, useEffect, useState } from 'react';
 import { language } from '@/data/data';
 
 type Lang = 'en' | 'id';
-type LangContextProps = {
-	data: unknown;
-	toggleLang: (lang: Lang) => void;
-};
+
+interface LangContextProps {
+	data: any;
+	toggleLang: () => void;
+	lang: Lang;
+}
 
 const LangContext = createContext<LangContextProps | undefined>(undefined);
 
@@ -28,11 +30,14 @@ export function LangProvider({ children }: { children: React.ReactNode }) {
 		localStorage.setItem('lang', lang);
 	}, [lang]);
 
-	const toggleLang = (newLang: Lang) => {
-		setLang(newLang);
+	const toggleLang = () => {
+		setLang((prevLang) => {
+			const nextLang = prevLang === 'en' ? 'id' : 'en';
+			return nextLang;
+		});
 	};
 
-	const value = { data: language[lang], toggleLang };
+	const value = { data: language[lang], toggleLang, lang };
 
 	return (
 		<LangContext.Provider value={value}>{children}</LangContext.Provider>

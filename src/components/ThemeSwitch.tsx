@@ -1,10 +1,11 @@
 'use client';
 
+import { useLang } from '@/context/LangContext';
 import { useEffect, useState } from 'react';
-import { Button } from 'react-daisyui';
 
 export default function ThemeSwitch() {
 	const [theme, setTheme] = useState('');
+	const { data } = useLang();
 
 	const toggleTheme = () => {
 		setTheme((prevTheme) => {
@@ -25,8 +26,11 @@ export default function ThemeSwitch() {
 	}, [theme]);
 
 	return (
-		<Button onClick={toggleTheme}>
-			{theme === 'black' ? '[ dark ]' : 'dark'}
-		</Button>
+		<span
+			onClick={toggleTheme}
+			className="font-semibold underline cursor-pointer"
+		>
+			{theme === 'black' ? data.theme.dark : data.theme.light}
+		</span>
 	);
 }

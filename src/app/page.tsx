@@ -1,11 +1,7 @@
-import ThemeSwitch from '@/components/ThemeSwitch';
-import Navbar from '@/sections/Navbar';
-
 export default function Home() {
 	return (
 		<div className="">
-			<Navbar />
-			<ThemeSwitch />
+			<h1 className="">Projects</h1>
 		</div>
 	);
 }

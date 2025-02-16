@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { LangProvider } from '@/context/LangContext';
+import Navbar from '@/sections/Navbar';
 
 export const metadata: Metadata = {
 	title: 'Create Next App',
@@ -13,10 +14,16 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en">
-			<body className={`antialiased`}>
-				<LangProvider>{children}</LangProvider>
-			</body>
+		<html
+			lang="en"
+			className={`bg-base-200 antialiased font-normal text-base-content`}
+		>
+			<LangProvider>
+				<body>
+					<Navbar />
+					{children}
+				</body>
+			</LangProvider>
 		</html>
 	);
 }
