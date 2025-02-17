@@ -4,16 +4,15 @@ import Logo from '@/components/Logo';
 import ThemeSwitch from '@/components/ThemeSwitch';
 import Wrapper from '@/components/Wrapper';
 import { useLang } from '@/context/LangContext';
-import Link from 'next/link';
 import { useState } from 'react';
 
 export default function Navbar() {
-	const { lang, data, toggleLang } = useLang();
+	const { lang, toggleLang } = useLang();
 	const [dropdown, setDropdown] = useState(false);
 	return (
-		<>
+		<div className="fixed top-0 left-0 w-full z-10 bg-base-200">
 			<Wrapper>
-				<div className="flex justify-between items-center py-4 sticky">
+				<div className="flex justify-between items-center py-4 relative">
 					<Logo />
 					<div
 						className="space-y-2 p-4 cursor-pointer"
@@ -30,13 +29,6 @@ export default function Navbar() {
 								: 'hidden'
 						}
 					>
-						<Link href="#" className="hover:text-base-content/50">
-							{data.navigation.about}
-						</Link>
-						<Link href="#" className="hover:text-base-content/50">
-							{data.navigation.contact}
-						</Link>
-
 						<p>
 							{lang === 'en' ? 'Theme : ' : 'Tema : '}
 							<ThemeSwitch />
@@ -55,6 +47,6 @@ export default function Navbar() {
 					</div>
 				</div>
 			</Wrapper>
-		</>
+		</div>
 	);
 }

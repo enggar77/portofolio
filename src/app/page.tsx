@@ -1,7 +1,11 @@
+import About from '@/sections/About';
+import Projects from '@/sections/Projects';
+
 export default function Home() {
 	return (
-		<div className="">
-			<h1 className="">Projects</h1>
-		</div>
+		<>
+			<About />
+			<Projects />
+		</>
 	);
 }

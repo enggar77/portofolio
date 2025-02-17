@@ -16,7 +16,7 @@ export default function RootLayout({
 	return (
 		<html
 			lang="en"
-			className={`bg-base-200 antialiased font-normal text-base-content`}
+			className={`antialiased font-normal text-base-content bg-base-200`}
 		>
 			<LangProvider>
 				<body>
