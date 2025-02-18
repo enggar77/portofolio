@@ -9,7 +9,7 @@ type Props = {
 
 export default function ExternalLink({ children, link }: Props) {
 	return (
-		<div className="w-fit mb-4 group">
+		<div className="w-fit group">
 			<div className="flex items-center gap-2 text-sm">
 				<NextLink
 					href={link}

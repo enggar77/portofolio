@@ -38,7 +38,7 @@ export const projects = [
 	{
 		id: '01',
 		name: 'HomeChef',
-		image: '/homechef.png',
+		image: ['/homechef-home.png', '/homechef-details.png'],
 		github: 'https://github.com/enggar77/HomeChef',
 		website: 'https://home-chef-nine.vercel.app',
 		techs: [
@@ -52,7 +52,11 @@ export const projects = [
 	{
 		id: '02',
 		name: 'Broodl',
-		image: '/broodl.png',
+		image: [
+			'/broodl-home.png',
+			'/broodl-login.png',
+			'/broodl-dashboard.png',
+		],
 		github: 'https://github.com/enggar77/Broodl',
 		website: 'https://broodl-lilac-kappa.vercel.app',
 		techs: ['Next.js', 'Tailwind', 'Zod', 'Firebase'],

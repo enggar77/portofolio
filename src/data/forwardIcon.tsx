@@ -1,5 +1,3 @@
-import React from 'react';
-
 const ForwardIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
 	<svg xmlns="http://www.w3.org/2000/svg" viewBox="4 4 16 16" {...props}>
 		<g id="arrow-forward">
