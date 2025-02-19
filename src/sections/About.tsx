@@ -63,7 +63,7 @@ export default function About() {
 				</div>
 			</div>
 
-			<div className="mt-auto pb-15 lg:pb-5">
+			<div className="mt-auto pb-16 lg:pb-5">
 				<Wrapper>
 					<div className="flex justify-end">
 						<div className="text-xs md:text-sm flex flex-col items-end gap-2 md:gap-5">
