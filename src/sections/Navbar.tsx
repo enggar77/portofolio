@@ -12,7 +12,7 @@ export default function Navbar() {
 	return (
 		<div className="fixed top-0 left-0 w-full z-10 bg-base-200">
 			<Wrapper>
-				<div className="flex justify-between items-center py-4 md:relative">
+				<div className="flex justify-between items-center py-4 lg:relative">
 					<Logo />
 					<div
 						className="space-y-2 p-4 cursor-pointer"
@@ -25,7 +25,7 @@ export default function Navbar() {
 					<div
 						className={
 							dropdown
-								? 'absolute right-0 top-[100%] text-sm flex flex-col items-end gap-2 bg-base-200 w-full pr-6 pb-3 md:bg-transparent md:pr-4 md:pt-2'
+								? 'absolute right-0 top-[100%] text-sm flex flex-col items-end gap-2 bg-base-200 w-full pr-6 pb-3 md:pr-8 lg:bg-transparent lg:pr-4 lg:pt-2'
 								: 'hidden'
 						}
 					>

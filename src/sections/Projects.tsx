@@ -35,7 +35,7 @@ function ProjectItem({ project }: { project: (typeof projects)[number] }) {
 						<span className="text-[24px]">{project.id}</span>
 						<p className="text-xs uppercase">project</p>
 					</div>
-					<h1 className="text-[60px] md:text-[100px] uppercase font-medium">
+					<h1 className="text-[50px] md:text-[100px] uppercase font-medium">
 						{project.name}
 					</h1>
 				</div>

@@ -16,7 +16,7 @@ export default function About() {
 		<div className="min-h-screen sticky top-0 flex flex-col">
 			<div className="md:max-w-[700px] lg:max-w-[850px] mx-auto pt-32 pb-10 px-[15px]">
 				<div className="group mb-10">
-					<h1 className="text-[40px] md:text-[60px] lowercase font-semibold transition-all duration-300 relative w-fit ">
+					<h1 className="hidden md:block text-[40px] md:text-[60px] lowercase font-semibold transition-all duration-300 relative w-fit ">
 						{about.name}
 						<div className="hidden absolute h-[80px] w-[80px] rounded-full overflow-hidden border-2 border-base-content transition-all duration-300 opacity-0 group-hover:opacity-100 lg:block lg:top-2 lg:-right-[100px]">
 							<Image
@@ -24,9 +24,12 @@ export default function About() {
 								alt={about.name}
 								fill
 								className="object-cover"
-								style={{ scale: 2.2 }}
+								style={{ scale: 2.5 }}
 							/>
 						</div>
+					</h1>
+					<h1 className="md:hidden text-[40px] font-semibold">
+						enggar j.
 					</h1>
 					<p
 						className="md:text-lg my-5"

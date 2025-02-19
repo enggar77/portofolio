@@ -92,6 +92,7 @@ export const about = {
 	techs: [
 		'React.js',
 		'Next.js',
+		'Git',
 		'Typescript',
 		'Redux Toolkit',
 		'Tailwind CSS',
@@ -103,5 +104,6 @@ export const about = {
 	links: {
 		linkedin: 'https://www.linkedin.com/in/enggar-jihandoko-e777/',
 		github: 'https://github.com/enggar77',
+		ig: 'https://www.instagram.com/nggar.j',
 	},
 };
