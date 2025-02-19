@@ -54,7 +54,6 @@ export default function About() {
 							<Badge
 								key={tech}
 								color="primary"
-								size="sm"
 								className="md:p-3 md:text-[14px]"
 							>
 								{tech}
@@ -64,7 +63,7 @@ export default function About() {
 				</div>
 			</div>
 
-			<div className="mt-auto pb-5">
+			<div className="mt-auto pb-15 lg:pb-5">
 				<Wrapper>
 					<div className="flex justify-end">
 						<div className="text-xs md:text-sm flex flex-col items-end gap-2 md:gap-5">
