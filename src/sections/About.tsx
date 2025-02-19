@@ -6,7 +6,6 @@ import Wrapper from '@/components/Wrapper';
 import { useLang } from '@/context/LangContext';
 import { about } from '@/data/data';
 import Image from 'next/image';
-import Link from 'next/link';
 import { Badge } from 'react-daisyui';
 
 export default function About() {
