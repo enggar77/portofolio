@@ -35,13 +35,13 @@ export default function About() {
 						className="md:text-lg my-5"
 						dangerouslySetInnerHTML={{ __html: data.about }}
 					/>
-					<Link
+					{/* <Link
 						href="#"
 						target="_blank"
 						className="underline font-semibold inline-block text-blue-500 hover:text-blue-600"
 					>
 						Resume
-					</Link>
+					</Link> */}
 				</div>
 
 				<div className="space-y-5">

@@ -14,7 +14,9 @@ function Clock({ timezone, city }: { timezone: string; city: string }) {
 
 	return (
 		<div>
-			{city} {time}
+			<span className="font-medium">
+				{city} {time}
+			</span>
 		</div>
 	);
 }
