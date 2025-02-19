@@ -25,10 +25,12 @@ function ProjectItem({ project }: { project: (typeof projects)[number] }) {
 						? 'bg-error'
 						: project.id === '02'
 						? 'bg-info'
+						: project.id === '03'
+						? 'bg-success'
 						: ''
 				}
 			>
-				<div className="max-w-[600px] mx-auto pt-20 pb-10 md:pt-24 md:pb-24 px-[15px]">
+				<div className="max-w-[700px] mx-auto pt-20 pb-10 md:pt-24 md:pb-24 px-[15px]">
 					<div className="flex items-baseline gap-1 border-b-2 w-fit border-base-content relative top-3 ml-auto">
 						<span className="text-[24px]">{project.id}</span>
 						<p className="text-xs uppercase">project</p>
@@ -39,7 +41,7 @@ function ProjectItem({ project }: { project: (typeof projects)[number] }) {
 				</div>
 			</div>
 
-			<div className="max-w-[600px] mx-auto py-6 px-[15px]">
+			<div className="max-w-[700px] mx-auto py-6 px-[15px]">
 				{/* BADGE */}
 				<div className="flex-wrap text-sm flex gap-2">
 					{project.techs.map((tech) => (
@@ -69,9 +71,11 @@ function ProjectItem({ project }: { project: (typeof projects)[number] }) {
 						<ExternalLink link={project.github}>
 							{data.project.link['01']}
 						</ExternalLink>
-						<ExternalLink link={project.website}>
-							{data.project.link['02']}
-						</ExternalLink>
+						{project.website && (
+							<ExternalLink link={project.website}>
+								{data.project.link['02']}
+							</ExternalLink>
+						)}
 					</div>
 				</div>
 			</div>
