@@ -23,20 +23,25 @@ export function useLang() {
 }
 
 export function LangProvider({ children }: { children: React.ReactNode }) {
-	const [lang, setLang] = useState<Lang>(
-		(localStorage.getItem('lang') as Lang) || 'en'
-	);
+	// Initial state is null to wait for localStorage check
+	const [lang, setLang] = useState<Lang | null>(null);
 
 	useEffect(() => {
-		localStorage.setItem('lang', lang);
+		// Check localStorage only on client side
+		const stored = localStorage.getItem('lang') as Lang | null;
+		setLang(stored || 'en');
+	}, []);
+
+	useEffect(() => {
+		if (lang) localStorage.setItem('lang', lang);
 	}, [lang]);
 
 	const toggleLang = () => {
-		setLang((prevLang) => {
-			const nextLang = prevLang === 'en' ? 'id' : 'en';
-			return nextLang;
-		});
+		setLang((prevLang) => (prevLang === 'en' ? 'id' : 'en'));
 	};
+
+	// Do not render children until lang is defined to avoid text shift
+	if (lang === null) return null;
 
 	const value = { data: language[lang], toggleLang, lang };
 
