@@ -23,7 +23,7 @@ export default function About() {
 								alt={about.name}
 								fill
 								className="object-cover"
-								style={{ scale: 2.5 }}
+								style={{ scale: 2 }}
 							/>
 						</div>
 					</h1>
@@ -34,13 +34,6 @@ export default function About() {
 						className="md:text-lg my-5"
 						dangerouslySetInnerHTML={{ __html: data.about }}
 					/>
-					{/* <Link
-						href="#"
-						target="_blank"
-						className="underline font-semibold inline-block text-blue-500 hover:text-blue-600"
-					>
-						Resume
-					</Link> */}
 				</div>
 
 				<div className="space-y-5">

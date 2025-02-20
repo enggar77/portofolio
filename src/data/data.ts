@@ -88,7 +88,7 @@ export const projects = [
 
 export const about = {
 	name: 'Enggar Jihandoko',
-	picture: '/profile.webp',
+	picture: '/me.jpg',
 	techs: [
 		'React.js',
 		'Next.js',
