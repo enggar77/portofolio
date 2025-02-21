@@ -8,7 +8,7 @@ export const language = {
 			description: {
 				'01': 'Homechef is a website that help and connects cooking enthusiasts to learn cooking techniques and recipes.',
 				'02': 'Broodl is a website that help me track my daily mood, it help me to see how much happy i am in that year.',
-				'03': 'Enigma is a laundry management application built with React and other modern web technologies.',
+				'03': 'Enigma is a web-based laundry management application that helps laundry business owners streamline their business operations.',
 			},
 			link: {
 				'01': 'See code on github',
@@ -27,7 +27,7 @@ export const language = {
 			description: {
 				'01': 'Homechef merupakan sebuah website yang bisa menghubungkan dan membantu orang yang suka masak untuk bisa menemukan resep-resep makanan dari berbagai negara dan menemukan teknik memasak yang lebih modern dan unik.',
 				'02': 'Broodl merupakan sebuah website yang membantu melacak mood saya sehari-hari, sehingga nantinya saya bisa melihat seberapa bahagia saya di tahun sebelumnya.',
-				'03': 'Enigma adalah aplikasi manajemen laundry yang dibangun dengan React dan teknologi web modern lainnya.',
+				'03': 'Enigma adalah web aplikasi manajemen laundry yang membantu untuk mempermudah pemilik usaha laundry dalam mengurus bisnis mereka.',
 			},
 			link: {
 				'01': 'Lihat codingan di github',
@@ -100,6 +100,7 @@ export const about = {
 		'DaisyUI',
 		'Prisma',
 		'Firebase',
+		'Supabase',
 	],
 	links: {
 		linkedin: 'https://www.linkedin.com/in/enggar-jihandoko-e777/',

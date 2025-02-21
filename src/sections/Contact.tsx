@@ -14,7 +14,7 @@ export default function Contact() {
 					</div>
 
 					<a
-						href="mailto:your.email@example.com"
+						href="mailto:jihandokoenggar@gmail.com"
 						className="underline text-[18px] md:text-[32px]  mt-14 block"
 					>
 						jihandokoenggar@gmail.com
